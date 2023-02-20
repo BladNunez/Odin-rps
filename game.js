@@ -7,4 +7,14 @@ function getComputerChoice(){
         return randomItem;
 }
 
-console.log(getComputerChoice());
+//Function to play a round of Rock Paper Scissors
+function playRound(playerSelection,computerSelection){
+        //rock loses paper , rock beats scissors, scissors beats paper
+        if(playerSelection === "rock".toLowerCase() && computerSelection === "Paper" ){
+                return 'You Lose! Paper beats Rock'
+        }
+}
+
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
