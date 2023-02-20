@@ -9,7 +9,6 @@ function getComputerChoice(){
 
 //Function to play a round of Rock Paper Scissors
 function playRound(playerSelection,computerSelection){
-        //rock loses paper , rock beats scissors, scissors beats paper
         playerSelection = playerSelection.toLowerCase();
         
         if(playerSelection === "rock" && computerSelection === "Paper"){
@@ -29,6 +28,5 @@ function playRound(playerSelection,computerSelection){
         }
 }
 
-const playerSelection = "scissors";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+let askUser = prompt("Enter your name: ")
+console.log(askUser)
