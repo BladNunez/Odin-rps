@@ -47,3 +47,10 @@ btnScissors.addEventListener("click",function(e){
         
 })
 
+const selectionsContainer = document.querySelector('.Selections');
+let resultContainer = document.createElement('div');
+resultContainer.classList.add('Results');
+selectionsContainer.appendChild(resultContainer);
+
+
+
