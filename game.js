@@ -25,17 +25,3 @@ function playRound(playerSelection,computerSelection){
                 return 'Tie! Same decision on both ends'
         }
 }
-
-
-function game(){
-        for(let i = 1; i < 6; i++){
-                let playerGuess = prompt("Enter your Guess: ").toLowerCase();
-                let computerGuess = getComputerChoice();
-
-                console.log(`Round ${i}`)
-                console.log(playRound(playerGuess,computerGuess));
-        }
-        
-}
-
-game();
