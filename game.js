@@ -8,7 +8,7 @@ function getComputerChoice(){
 }
 
 //Function to play a round of Rock Paper Scissors
-function playRound(playerSelection,computerSelection){
+function playRound(e,playerSelection,computerSelection){
         if(playerSelection === "rock" && computerSelection === "Paper"){
                 return 'You Lose! Paper beats Rock'
         } else if(playerSelection === "rock" && computerSelection === "Scissors"){
@@ -31,17 +31,19 @@ const btnRock = document.querySelector('#Rock');
 const btnPaper = document.querySelector('#Paper');
 const btnScissors = document.querySelector('#Scissors');
 
+let score = 0;
+
 btnRock.addEventListener("click", function(e){
-        playRound(e,"Rock",getComputerChoice());
-        console.log("Rock button works");
+    console.log(playRound(e,"rock",getComputerChoice()));
 })
 
 btnPaper.addEventListener("click",function(e){
-        playRound(e,"Paper",getComputerChoice());
-        console.log("Paper button works");
+        console.log(playRound(e,"paper",getComputerChoice()));
+        
 })
 
 btnScissors.addEventListener("click",function(e){
-        playRound(e,"Scissors",getComputerChoice());
-        console.log("Scissors button works");
+        console.log(playRound(e,"scissors",getComputerChoice()));
+        
 })
+
