@@ -25,3 +25,23 @@ function playRound(playerSelection,computerSelection){
                 return 'Tie! Same decision on both ends'
         }
 }
+
+//Create selectors to access buttons
+const btnRock = document.querySelector('#Rock');
+const btnPaper = document.querySelector('#Paper');
+const btnScissors = document.querySelector('#Scissors');
+
+btnRock.addEventListener("click", function(e){
+        playRound(e,"Rock",getComputerChoice());
+        console.log("Rock button works");
+})
+
+btnPaper.addEventListener("click",function(e){
+        playRound(e,"Paper",getComputerChoice());
+        console.log("Paper button works");
+})
+
+btnScissors.addEventListener("click",function(e){
+        playRound(e,"Scissors",getComputerChoice());
+        console.log("Scissors button works");
+})
