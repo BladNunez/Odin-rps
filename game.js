@@ -7,6 +7,7 @@ function getComputerChoice(){
         return randomItem;
 }
 
+
 //Function to play a round of Rock Paper Scissors
 function playRound(e,playerSelection,computerSelection){
         if(playerSelection === "rock" && computerSelection === "Paper"){
@@ -31,19 +32,17 @@ const btnRock = document.querySelector('#Rock');
 const btnPaper = document.querySelector('#Paper');
 const btnScissors = document.querySelector('#Scissors');
 
-let score = 0;
-
 btnRock.addEventListener("click", function(e){
-    resultContainer.append(playRound(e,"rock",getComputerChoice()));
+    resultContainer.append(playRound(e,"rock",getComputerChoice()) + '\n');
 })
 
 btnPaper.addEventListener("click",function(e){
-        resultContainer.append(playRound(e,"paper",getComputerChoice()));
+        resultContainer.append(playRound(e,"paper",getComputerChoice()) , '\n');
         
 })
 
 btnScissors.addEventListener("click",function(e){
-        resultContainer.append(playRound(e,"scissors",getComputerChoice()));
+        resultContainer.append(playRound(e,"scissors",getComputerChoice()) + '\n');
         
 })
 
