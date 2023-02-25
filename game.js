@@ -33,24 +33,30 @@ const btnScissors = document.querySelector('#Scissors');
 
 let score = 0;
 
+
+
+
 btnRock.addEventListener("click", function(e){
-    console.log(playRound(e,"rock",getComputerChoice()));
+    resultContainer.append(playRound(e,"rock",getComputerChoice()));
 })
 
 btnPaper.addEventListener("click",function(e){
-        console.log(playRound(e,"paper",getComputerChoice()));
+        resultContainer.append(playRound(e,"paper",getComputerChoice()));
         
 })
 
 btnScissors.addEventListener("click",function(e){
-        console.log(playRound(e,"scissors",getComputerChoice()));
+        resultContainer.append(playRound(e,"scissors",getComputerChoice()));
         
 })
 
 const selectionsContainer = document.querySelector('.Selections');
 let resultContainer = document.createElement('div');
 resultContainer.classList.add('Results');
-selectionsContainer.appendChild(resultContainer);
+resultContainer.style.cssText = "background-color: blue;"
+selectionsContainer.after(resultContainer);
+
+
 
 
 
