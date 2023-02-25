@@ -33,9 +33,6 @@ const btnScissors = document.querySelector('#Scissors');
 
 let score = 0;
 
-
-
-
 btnRock.addEventListener("click", function(e){
     resultContainer.append(playRound(e,"rock",getComputerChoice()));
 })
@@ -53,7 +50,6 @@ btnScissors.addEventListener("click",function(e){
 const selectionsContainer = document.querySelector('.Selections');
 let resultContainer = document.createElement('div');
 resultContainer.classList.add('Results');
-resultContainer.style.cssText = "background-color: blue;"
 selectionsContainer.after(resultContainer);
 
 
